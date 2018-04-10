@@ -11,6 +11,7 @@ import Foundation
 // Input
 
 // Loop forever until we ger good input
+var validInput = "" //Outside the loop, we can use it later on after the loop
 prompting: while 1 == 1 {
     
     // Prompt the user
@@ -38,13 +39,18 @@ prompting: while 1 == 1 {
         
         // Check the character
         switch individualCharacter {
-        case "A", "B", "C", "D" :
+        case "A", "B", "C", "D","E","F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z":
             continue checking// Go to the next character in the string
         default:
             continue prompting // Stop looking, we find bad input
         }
     }
     // If we got to this point, we know the input is good
+    validInput = giveInput
     break// Quit the while loop and begin Process section
 }
+
+//Process
+print(validInput)
+
 
